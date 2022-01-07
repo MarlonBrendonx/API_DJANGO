@@ -26,7 +26,13 @@ route.register(r'user', userviewsets.UserViewSet, basename="User" )
 urlpatterns = [
     
     path('',include(route.urls)),
-    path('export-users',views.exportUsers,name="export-users"),
+    path('export',views.exportUsers,name="export-users"),
  
 ]
+
+
+
+
+
+
 
