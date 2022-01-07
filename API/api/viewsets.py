@@ -6,9 +6,4 @@ class UserViewSet(viewsets.ModelViewSet):
 
 	serializer_class = serializers.UserSerializers	
 	queryset = models.User.objects.all()
-	
-	def listUsers(request):
-		users=models.User.objects.all()
-		return users	
-
 

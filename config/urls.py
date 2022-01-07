@@ -24,9 +24,9 @@ route.register(r'user', userviewsets.UserViewSet, basename="User" )
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    
     path('',include(route.urls)),
-    path('list',views.listUsers,name="list"),
+    path('export-users',views.exportUsers,name="export-users"),
  
 ]
 

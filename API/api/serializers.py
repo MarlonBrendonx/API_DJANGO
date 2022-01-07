@@ -7,15 +7,12 @@ import string
 class UserSerializers(serializers.ModelSerializer):
 
 
-	def to_representation(self, data):
-			
-		data = super(UserSerializers, self).to_representation(data)
+	def validate(self, data):
 		
-		if data.get('password') == "":
+		if data["password"] == '':
 		
 			alphabet = string.ascii_letters + string.digits
 			password = ''.join(secrets.choice(alphabet) for i in range(4,21))
-			
 			data['password']=password
 	
 		return data

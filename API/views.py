@@ -7,7 +7,7 @@ import xlwt
 
 # Create your views here.
 
-def listUsers(request):
+def exportUsers(request):
 	
 
 	response=HttpResponse(content_type='application/ms-excel')
